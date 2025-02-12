@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Specifications</title>
+    <script src="test-specs.js" defer></script>
+</head>
+<body>
+    <h1>Test Specifications</h1>
+    <h2>Unit Tests</h2>
+    <div id="unit-tests"></div>
+    <h2>Functional Tests</h2>
+    <div id="functional-tests"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const unitTestsDiv = document.getElementById("unit-tests");
+            const functionalTestsDiv = document.getElementById("functional-tests");
+            
+            testSpecifications.unitTests.multiplication.forEach(test => {
+                let p = document.createElement("p");
+                p.textContent = test;
+                unitTestsDiv.appendChild(p);
+            });
+            
+            testSpecifications.unitTests.concatOdds.forEach(test => {
+                let p = document.createElement("p");
+                p.textContent = test;
+                unitTestsDiv.appendChild(p);
+            });
+            
+            testSpecifications.functionalTests.shoppingCartCheckout.forEach(test => {
+                let p = document.createElement("p");
+                p.textContent = test;
+                functionalTestsDiv.appendChild(p);
+            });
+        });
+    </script>
+</body>
+</html>
